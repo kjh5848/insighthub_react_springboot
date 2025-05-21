@@ -28,6 +28,7 @@ services:
     container_name: springboot-dev
     ports:
       - "8081:8081"
+      - "5006:5006"
     depends_on:
       - postgres
       - redis

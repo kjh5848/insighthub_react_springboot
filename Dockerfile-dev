@@ -1,0 +1,7 @@
+FROM gradle:8.5-jdk21-alpine
+WORKDIR /app
+COPY . .
+
+# 디버깅 포트 설정
+
+CMD ["gradle", "bootRun"]

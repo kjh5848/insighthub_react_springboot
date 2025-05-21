@@ -17,3 +17,7 @@
 ```
 위 내용을 .gitignore에 넣어야지 git에 올릴 수 있음.
 
+## Docker
+- 명령어
+  - (강추) docker-compose up --build #실행된 컨테이너가 있든 없든 강제로 빌드
+  - docker-compose up 빌드된 이미지가 있을 경우 그대로 사용
