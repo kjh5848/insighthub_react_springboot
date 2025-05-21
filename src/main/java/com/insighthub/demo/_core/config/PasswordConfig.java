@@ -1,4 +1,4 @@
-package org.jaybon.jaylog.config.security;
+package com.insighthub.demo._core.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

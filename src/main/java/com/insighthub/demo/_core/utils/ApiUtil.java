@@ -1,4 +1,4 @@
-package shop.mtcoding.blog._core.utils;
+package com.insighthub.demo._core.utils;
 
 import lombok.Data;
 

@@ -1,8 +1,8 @@
-package org.jaybon.jaylog.config.security.auth;
+package com.insighthub.demo._core.config.security.auth;
 
 import lombok.RequiredArgsConstructor;
-import org.jaybon.jaylog.model.user.entity.UserEntity;
-import org.jaybon.jaylog.model.user.repository.UserRepository;
+import com.insighthub.demo._core.model.user.entity.UserEntity;
+import com.insighthub.demo._core.model.user.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

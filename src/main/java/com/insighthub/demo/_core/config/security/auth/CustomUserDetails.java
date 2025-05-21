@@ -1,11 +1,11 @@
-package org.jaybon.jaylog.config.security.auth;
+package com.insighthub.demo._core.config.security.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.jaybon.jaylog.model.user.constraint.LoginType;
-import org.jaybon.jaylog.model.user.entity.UserEntity;
+import com.insighthub.demo._core.model.user.constraint.LoginType;
+import com.insighthub.demo._core.model.user.entity.UserEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

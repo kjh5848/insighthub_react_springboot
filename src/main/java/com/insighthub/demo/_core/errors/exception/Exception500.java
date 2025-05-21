@@ -1,4 +1,4 @@
-package shop.mtcoding.blog._core.errors.exception;
+package com.insighthub.demo._core.errors.exception;
 
 public class Exception500 extends RuntimeException{
 

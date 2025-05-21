@@ -1,4 +1,4 @@
-package shop.mtcoding.blog._core.interceptor;
+package com.insighthub.demo._core.interceptor;
 
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.exceptions.TokenExpiredException;
@@ -7,11 +7,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-import shop.mtcoding.blog._core.errors.exception.Exception401;
-import shop.mtcoding.blog._core.errors.exception.Exception500;
-import shop.mtcoding.blog._core.utils.JwtUtil;
-import shop.mtcoding.blog.user.SessionUser;
-import shop.mtcoding.blog.user.User;
+import com.insighthub.demo._core.errors.exception.Exception401;
+import com.insighthub.demo._core.errors.exception.Exception500;
+import com.insighthub.demo._core.utils.JwtUtil;
+import com.insighthub.demo.user.SessionUser;
+import com.insighthub.demo.user.User;
 
 // /api/** 인증 필요 주소
 public class LoginInterceptor implements HandlerInterceptor{

@@ -1,4 +1,4 @@
-package shop.mtcoding.blog._core.errors;
+package com.insighthub.demo._core.errors;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -6,7 +6,7 @@ import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.FieldError;
-import shop.mtcoding.blog._core.errors.exception.Exception400;
+import com.insighthub.demo._core.errors.exception.Exception400;
 
 @Aspect // AOP 등록
 @Component // IoC 등록

@@ -1,12 +1,12 @@
-package shop.mtcoding.blog._core.errors;
+package com.insighthub.demo._core.errors;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import shop.mtcoding.blog._core.errors.exception.*;
-import shop.mtcoding.blog._core.utils.ApiUtil;
+import com.insighthub.demo._core.errors.exception.*;
+import com.insighthub.demo._core.utils.ApiUtil;
 
 // RuntimeException이 터지면 해당 파일로 오류가 모인다
 @Slf4j

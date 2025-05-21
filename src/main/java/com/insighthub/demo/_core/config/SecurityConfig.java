@@ -1,10 +1,10 @@
-package org.jaybon.jaylog.config.security;
+package com.insighthub.demo._core.config;
 
 import lombok.RequiredArgsConstructor;
-import org.jaybon.jaylog.config.security.auth.CustomAccessDeniedHandler;
-import org.jaybon.jaylog.config.security.auth.CustomAuthenticationEntryPoint;
-import org.jaybon.jaylog.config.security.auth.CustomUserDetailsService;
-import org.jaybon.jaylog.config.security.auth.JwtAuthorizationFilter;
+import com.insighthub.demo._core.config.security.auth.CustomAccessDeniedHandler;
+import com.insighthub.demo._core.config.security.auth.CustomAuthenticationEntryPoint;
+import com.insighthub.demo._core.config.security.auth.CustomUserDetailsService;
+import com.insighthub.demo._core.config.security.auth.JwtAuthorizationFilter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
