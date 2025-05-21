@@ -44,3 +44,20 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+// 프론트엔드 빌드 설정
+def frontendDir = "$projectDir/src/frontend"
+
+task buildFrontend(type: Exec) {
+	workingDir frontendDir
+	commandLine 'npm', 'install'
+	commandLine 'npm', 'run', 'build'
+}
+
+task copyFrontend(type: Copy) {
+	from "$frontendDir/dist"
+	into "$projectDir/src/main/resources/static"
+}
+
+buildFrontend.dependsOn copyFrontend
+build.dependsOn buildFrontend

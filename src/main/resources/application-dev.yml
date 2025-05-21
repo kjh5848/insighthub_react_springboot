@@ -1,0 +1,95 @@
+spring:
+  # 애플리케이션 이름 설정 (개발 환경임을 표시)
+  application:
+    name: demo-dev
+
+  web:
+    cors:
+      # 프론트엔드 개발 서버 주소 허용
+      allowed-origins: http://localhost:8080
+      # 허용할 HTTP 메서드 설정
+      allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+      # 모든 헤더 허용
+      allowed-headers: "*"
+      # 인증 정보(쿠키 등) 허용
+      allow-credentials: true
+      
+  # 개발 환경에서의 데이터베이스 설정
+  datasource:
+    # PostgreSQL 데이터베이스 연결 URL
+    url: jdbc:postgresql://localhost:5432/demo
+    # 데이터베이스 사용자 이름
+    username: postgres
+    # 데이터베이스 비밀번호
+    password: postgres
+    # PostgreSQL JDBC 드라이버 클래스
+    driver-class-name: org.postgresql.Driver
+
+  # JPA 설정
+  jpa:
+    # 엔티티 변경사항을 자동으로 데이터베이스에 반영
+    hibernate:
+      ddl-auto: update
+    # SQL 쿼리 로그 출력
+    show-sql: true
+    # Hibernate 관련 설정
+    properties:
+      hibernate:
+        # SQL 쿼리 포맷팅
+        format_sql: true
+        # PostgreSQL 전용 방언 설정
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    # 데이터베이스 플랫폼 설정
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  # Redis 설정
+  redis:
+    # Redis 서버 호스트
+    host: localhost
+    # Redis 서버 포트
+    port: 6379
+
+server:
+  port: 8081
+
+# 로깅 설정
+logging:
+  level:
+    # 루트 로그 레벨
+    root: INFO
+    # 애플리케이션 패키지 로그 레벨
+    com.insighthub: DEBUG
+    # Spring Web 로그 레벨
+    org.springframework.web: DEBUG
+    # Hibernate 로그 레벨
+    org.hibernate: INFO
+    # SQL 쿼리 로그 레벨
+    org.hibernate.SQL: DEBUG
+    # SQL 파라미터 바인딩 로그 레벨
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+# PostgreSQL 설정
+spring:
+  sql:
+    init:
+      # SQL 초기화 모드 (항상 실행)
+      mode: always
+      # 스키마 초기화 SQL 파일 위치
+      schema-locations: classpath:db/schema.sql
+      # 초기 데이터 SQL 파일 위치
+      data-locations: classpath:db/data.sql
+  jpa:
+    # OSIV(Open Session in View) 비활성화 (성능 최적화)
+    open-in-view: false
+    # Hibernate 성능 최적화 설정
+    properties:
+      hibernate:
+        jdbc:
+          # 배치 처리 크기 설정
+          batch_size: 100
+        # INSERT 쿼리 최적화
+        order_inserts: true
+        # UPDATE 쿼리 최적화
+        order_updates: true
+        # Hibernate 통계 정보 생성
+        generate_statistics: true 
