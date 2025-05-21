@@ -69,7 +69,6 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 
 # PostgreSQL 설정
-spring:
   sql:
     init:
       # SQL 초기화 모드 (항상 실행)

@@ -1,0 +1,43 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres-dev
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: demo
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  redis:
+    image: redis:6
+    container_name: redis-dev
+    ports:
+      - "6379:6379"
+    networks:
+      - backend
+
+  springboot:
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    container_name: springboot-dev
+    ports:
+      - "8081:8081"
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      SPRING_PROFILES_ACTIVE: dev     # 🔹 여기서 dev 설정을 명시함
+    networks:
+      - backend
+
+volumes:
+  pgdata:
+
+networks:
+  backend:
